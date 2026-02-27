@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/yourusername/your-repo-name.git'
+                git 'https://github.com/rmassey95/Lab2Question2'
             }
         }
         stage('Build') {
@@ -12,12 +12,6 @@ pipeline {
                 script {
                     sh 'mvn clean install'
                 }
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying application...'
-                // Add deployment steps here if necessary
             }
         }
     }
